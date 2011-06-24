@@ -1,0 +1,84 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>HCI kleinanzeigen</title> 
+
+	<link rel="stylesheet"  href="css/reset.css" />
+	<link rel="stylesheet"  href="css/jquery.mobile-1.0b1.css" />
+  <link rel="stylesheet" type="text/css" href="css/jquery.swipegallery.css">
+	<link rel="stylesheet"  href="css/hci-offer.css" />  
+
+	<script type="text/javascript" src="js/jquery-1.6.1.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.0b1.js"></script> 
+  <script type="text/javascript" src="js/jquery.swipegallery.js"></script>
+
+</head> 
+<body> 
+  <div data-role="page" id="jqm-home" class="type-home index-page"> 
+
+    <div data-role="header" data-position="inline">
+    </div>
+
+	  <div data-role="content"> 
+      <header>
+        <h1 class="header-title">HCI Kleinanzeigen</h1>
+      </header>
+
+      <form class="search-form" action="list.html">
+        <input type="text" name="q" />
+        <div class="search-submit">
+	        <input type="submit" class="search-submit" data-role="button" data-theme="a" data-inline="true" value="Suchen" />
+        </div>
+      </form>
+
+	    <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b"> 
+		    <li><a href="form.html" rel="external">Neue Anzeige</a></li> 
+	    </ul> 
+
+      <div class="swipegallery-container">
+        <ul data-role="listview" class="swipegallery">
+
+          <li><a href="show.html"  rel="external">
+              <img src="http://lorempixum.com/80/80/sports" />
+              <h3>Broken Bells</h3>
+              <p>Broken Bells</p>
+          </a></li>
+
+          <li><a href="show.html"  rel="external">
+              <img src="http://lorempixum.com/80/80/fashion" />
+              <h3>Broken Bells</h3>
+              <p>Broken Bells</p>
+          </a></li>
+
+
+          <li><a href="show.html"  rel="external">
+              <img src="http://lorempixum.com/80/80/transport" />
+              <h3>Broken Bells</h3>
+              <p>Broken Bells</p>
+          </a></li>
+
+        </ul>
+      </div>
+	  </div> 
+
+	  <div data-role="footer" data-theme="c"> 
+      <p>&copy; 2011 The jQuery Project</p> 
+	  </div>
+
+  </div>
+	
+  <script type="text/javascript" language="Javascript">
+   $(window).load(function() { 
+      $('.swipegallery').swipeGallery({
+        height: '80px',
+        width: $('.swipegallery').parent().parent().width() + 'px',
+        background: '#E2E2E2'
+      });  
+   });
+  </script> 
+
+</body> 
+</html> 
