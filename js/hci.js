@@ -1,11 +1,32 @@
 var hci = {};
 
+hci.sortBy = '';
+
 hci.init = function () {
-  var offers = hci.offers.sort(function(a,b) { return parseFloat(a.price) - parseFloat(b.price) } );
+  $('.sort-by-select').change(function(){
+    hci.sortByChangeHandler();
+  });
+
+  hci.sortByChangeHandler();
+  hci.refreshList();
+}
+
+hci.refreshList = function () {
+  $('ul.ui-listview').html('');
+
+  var offers = hci.offers;
+  if (hci.sortBy != '') {
+    offers = hci.offers.sort(function(a,b) { return parseFloat(a[hci.sortBy]) - parseFloat(b[hci.sortBy]) } );
+  }
 
   $(offers).each(function(){
     hci.appendOffer(this);
   });
+}
+
+hci.sortByChangeHandler = function () {
+  hci.sortBy = $('.sort-by-select').val();
+  hci.refreshList();
 }
 
 hci.appendOffer = function(offer) {
@@ -22,8 +43,8 @@ hci.appendOffer = function(offer) {
 
   $('.title', listElement).text(offer.title);
   $('.price', listElement).text(offer.price);
-  $('.description', listElement).text(offer.price);
-  $('.place', listElement).text(offer.price);
+  $('.description', listElement).text(offer.description);
+  $('.place', listElement).text(offer.place);
   $('.photo', listElement).attr('src', offer.photo);
 
   $('ul.ui-listview').append(listElement);
