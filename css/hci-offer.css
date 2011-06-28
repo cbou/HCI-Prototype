@@ -46,6 +46,20 @@
 }
 
 /**
+ * List
+ */
+.price {
+  float: right;
+  font-weight: bold;
+}
+.place {
+  float: right;
+}
+.sort-by-container {
+  padding: 0 0 25px 0;
+}
+
+/**
  *	Libraries override
  */
 /* Longer list */

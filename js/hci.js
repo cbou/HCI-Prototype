@@ -37,14 +37,14 @@ hci.appendOffer = function(offer) {
 	    <p class="price"></p>\
 	    <h3 class="title"></h3>\
 	    <p class="description"></p>\
-      <p class="ui-li-desc place" style="float: right;"></p>\
+      <p class="ui-li-desc place"></p>\
     </a>';
   $(listElement).html(content);
 
   $('.title', listElement).text(offer.title);
   $('.price', listElement).text(offer.price);
   $('.description', listElement).text(offer.description);
-  $('.place', listElement).text(offer.place);
+  $('.place', listElement).text(offer.place + ' (' + offer.distance + 'km)');
   $('.photo', listElement).attr('src', offer.photo);
 
   $('ul.ui-listview').append(listElement);
