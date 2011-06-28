@@ -10,6 +10,7 @@
 	<script src="js/jquery-1.6.1.js"></script>
 	<script src="js/jquery.mobile-1.0b1.js"></script>
 	<script src="js/hci.js"></script>
+	<script src="js/hci.offers.js"></script>
 </head> 
 <body> 
 
@@ -24,13 +25,6 @@
 	    <div data-role="content">	
 			
 			<ul data-role="listview">
-				<li><a href="show.html" rel="external">
-					<img src="http://lorempixum.com/80/80/transport/1" />
-					<p style="float: right;">16 000$</p>
-					<h3>BMW sehr schnell</h3>
-					<p>Faehrt gut und schnell</p>
-          <p class="ui-li-desc" style="float: right;">Berlin - Mitte</p>
-				</a></li>
 			</ul>
 	    </div> 
 	
@@ -39,6 +33,13 @@
 		</div>	
 	
   </div>
+
+  <script type="text/javascript">
+
+    $('#jqm-home').live('pagecreate',function(event){
+      hci.init();
+    });
+  </script>
 
 </body> 
 </html> 
