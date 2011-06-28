@@ -1,18 +1,18 @@
 <!DOCTYPE html> 
 <html> 
 <head> 
-	<meta charset="utf-8"> 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>HCI Kleinanzeigen</title> 
+  <title>HCI Kleinanzeigen</title> 
 
-	<link rel="stylesheet"  href="css/reset.css" />
-	<link rel="stylesheet"  href="css/jquery.mobile-1.0b1.css" />
+  <link rel="stylesheet"  href="css/reset.css" />
+  <link rel="stylesheet"  href="css/jquery.mobile-1.0b1.css" />
   <link rel="stylesheet" type="text/css" href="css/jquery.swipegallery.css">
-	<link rel="stylesheet"  href="css/hci-offer.css" />  
+  <link rel="stylesheet"  href="css/hci-offer.css" />  
 
-	<script type="text/javascript" src="js/jquery-1.6.1.js"></script>
-	<script type="text/javascript" src="js/jquery.mobile-1.0b1.js"></script> 
+  <script type="text/javascript" src="js/jquery-1.6.1.js"></script>
+  <script type="text/javascript" src="js/jquery.mobile-1.0b1.js"></script> 
   <script type="text/javascript" src="js/jquery.swipegallery.js"></script>
 
 </head> 
@@ -22,7 +22,7 @@
     <div data-role="header" data-position="inline">
     </div>
 
-	  <div data-role="content"> 
+    <div data-role="content"> 
       <header>
         <h1 class="header-title">HCI Kleinanzeigen</h1>
       </header>
@@ -30,70 +30,70 @@
       <form class="search-form" action="list.html">
         <input type="text" name="q" />
         <div class="search-submit">
-	        <input type="submit" class="search-submit" data-role="button" data-theme="a" data-inline="true" value="Suchen" />
+          <input type="submit" class="search-submit" data-role="button" data-theme="a" data-inline="true" value="Suchen" />
         </div>
       </form>
 
-	    <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b"> 
-		    <li><a href="form.html" rel="external">Neue Anzeige</a></li> 
-	    </ul> 
+      <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b"> 
+        <li><a href="form.html" rel="external">Neue Anzeige</a></li> 
+      </ul> 
 
       <div class="swipegallery-container">
         <ul data-role="listview" class="swipegallery">
 
           <li><a href="show.html"  rel="external">
-              <img src="http://lorempixum.com/80/80/sports" />
-              <h3>Broken Bells</h3>
-              <p>Broken Bells</p>
+            <img src="http://lorempixum.com/80/80/sports" />
+            <h3>Broken Bells</h3>
+            <p>Broken Bells</p>
           </a></li>
 
           <li><a href="show.html"  rel="external">
-              <img src="http://lorempixum.com/80/80/fashion" />
-              <h3>Broken Bells</h3>
-              <p>Broken Bells</p>
+            <img src="http://lorempixum.com/80/80/fashion" />
+            <h3>Broken Bells</h3>
+            <p>Broken Bells</p>
           </a></li>
 
 
           <li><a href="show.html"  rel="external">
-              <img src="http://lorempixum.com/80/80/transport" />
-              <h3>Broken Bells</h3>
-              <p>Broken Bells</p>
+            <img src="http://lorempixum.com/80/80/transport" />
+            <h3>Broken Bells</h3>
+            <p>Broken Bells</p>
           </a></li>
 
         </ul>
       </div>
-	  </div> 
+    </div> 
 
-	  <div data-role="footer" data-theme="c"> 
+    <div data-role="footer" data-theme="c"> 
       <p>&copy; 2011 HCI Kleinanzeigen</p> 
-	  </div>
+    </div>
 
   </div>
-	
+
   <script type="text/javascript" language="Javascript">
-   $(window).load(function() { 
+  $(window).load(function() { 
 
-      var galleryWidth = $('.swipegallery').parent().parent().width();
+    var galleryWidth = $('.swipegallery').parent().parent().width();
 
-      $('.swipegallery').swipeGallery({
-        height: '80px',
-        width: galleryWidth + 'px',
-        background: '#E2E2E2'
-      });  
+    $('.swipegallery').swipeGallery({
+      height: '80px',
+      width: galleryWidth + 'px',
+      background: '#E2E2E2'
+    });  
 
-      $('.swipegallery-container .swipegallery').css({left: '0px'});
+    $('.swipegallery-container .swipegallery').css({left: '0px'});
 
-      $('.swipegallery-container').live('swipeleft',function(event, ui){
-        var galleryWidth = $(event.target).parent().parent().width();
-        $('.swipegallery').animate({left: '-='+galleryWidth+'px'}, { duration: 1000 });
-      });
+    $('.swipegallery-container').live('swipeleft',function(event, ui){
+      var galleryWidth = $(event.target).parent().parent().width();
+      $('.swipegallery').animate({left: '-='+galleryWidth+'px'}, { duration: 1000 });
+    });
 
-      $('.swipegallery-container').live('swiperight',function(event, ui){
-        var galleryWidth = $(event.target).parent().parent().width();
-        $('.swipegallery').animate({left: '+='+galleryWidth+'px'}, { duration: 1000 });
-      });
+    $('.swipegallery-container').live('swiperight',function(event, ui){
+      var galleryWidth = $(event.target).parent().parent().width();
+      $('.swipegallery').animate({left: '+='+galleryWidth+'px'}, { duration: 1000 });
+    });
 
-   });
+  });
   </script> 
 
 </body> 
