@@ -15,6 +15,42 @@
   padding-bottom: 52px;
 }
 
+.ui-icon-hci-phone,
+.ui-icon-hci-mail,
+.ui-icon-hci-share {
+  background-color: transparent;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+.ui-icon-hci-phone {
+  background-image: url(../images/phone.png);
+  width: 17px;
+}
+
+.ui-icon-hci-mail {
+  background-image: url(../images/mail.png);
+  width: 24px;
+}
+
+.ui-icon-hci-share {
+  background-image: url(../images/share.png);
+  width: 27px;
+}
+
+.both {
+  clear: both;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
 /**
  *  INDEX
  */
@@ -57,6 +93,49 @@
 }
 .sort-by-container {
   padding: 0 0 25px 0;
+}
+
+/**
+ * Show
+ */
+.offer-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 0 15px 0;
+}
+
+.informations {
+  width: 70%;
+}
+
+.category-label,
+.price-label,
+.autor-label {
+  float: left;
+  margin: 0 0 10px 0;
+}
+
+.category,
+.price,
+.autor {
+  float: right;
+}
+
+.description {
+  margin: 0 0 10px 0;
+}
+
+.images {
+  text-align: center;
+}
+
+.images .left {
+  margin: 0 0 0 5px;
+}
+
+.images .right {
+  margin: 0 5px 0 0;
 }
 
 /**
