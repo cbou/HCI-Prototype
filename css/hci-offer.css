@@ -144,6 +144,11 @@
   text-align: center;
 }
 
+.images img{
+  width: 80px;
+  height: 80px;
+}
+
 .images .left {
   margin: 0 0 0 5px;
 }
