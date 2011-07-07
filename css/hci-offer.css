@@ -153,6 +153,18 @@
 }
 
 /**
+ *  Search dialog
+ */ 
+.change-place-container p {
+  float: left;
+  /* center with change button */
+  position: relative;
+  top: 15px;
+}
+.change-place-container a {
+  float: right;
+}
+/**
  *  Add offer
  */
 .add-offer-form .ui-field-contain {
