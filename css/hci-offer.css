@@ -176,6 +176,16 @@
 .image-dialog .image-zoom {
   width: 100%;
 }
+
+.image-dialog .ui-btn-left {
+  display: none;
+}
+
+.image-dialog .ui-header .ui-btn {
+  float: left;
+  right: initial;
+  left: 5px;
+}
 /**
  *  Add offer
  */

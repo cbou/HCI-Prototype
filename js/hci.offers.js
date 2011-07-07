@@ -2,6 +2,7 @@ hci.offers = [
   {
     id: 1,
     title : 'BMW sehr schnell',
+    mark: 'bmw',
     description : 'Faehrt gut und schnell',
     price : 16000,
     place: 'Berlin - Wedding',
@@ -12,6 +13,7 @@ hci.offers = [
   {
     id: 2,
     title : 'Billige Renault',
+    mark: 'renault',
     description : 'Vier raeder, ein Motor, kein Sitze',
     price : 1500,
     place: 'Erfurt',
@@ -22,6 +24,7 @@ hci.offers = [
   {
     id: 3,
     title : 'Bequeme Audi',
+    mark: 'audi',
     description : 'Everyone dreams of an Audi.',
     price : 17000,
     place: 'Berlin - Potsdam',
@@ -32,6 +35,7 @@ hci.offers = [
   {
     id: 4,
     title : 'Mercedes fuer Retner',
+    mark: 'mercedes',
     description : 'Nur fuer reiche Retner.',
     price : 32000,
     place: 'Muenchen',
@@ -42,6 +46,7 @@ hci.offers = [
   {
     id: 5,
     title : 'Toyota sushi',
+    mark: 'toyota',
     description : 'Sushi Master',
     price : 5000,
     place: 'Leipzig',
@@ -52,6 +57,7 @@ hci.offers = [
   {
     id: 6,
     title : 'VW Käfer',
+    mark: 'vw',
     description : 'Alteres Fahrzueg',
     price : 3000,
     place: 'Berlin - Charlottenburg',
@@ -62,6 +68,7 @@ hci.offers = [
   {
     id: 7,
     title : 'Rumänische Dacia',
+    mark: 'dacia',
     description : 'Dacia ist teuerer als Renault.',
     price : 4500,
     place: 'Berlin - Tempelhof',

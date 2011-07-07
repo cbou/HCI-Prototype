@@ -13,6 +13,9 @@
 
   <script src="js/jquery-1.6.1.js"></script>
   <script src="js/jquery.mobile-1.0b1.js"></script>
+  <script src="js/jquery.url.js"></script>
+  <script src="js/hci.js"></script>
+  <script src="js/hci.offers.js"></script>
 
 </head> 
 <body> 
@@ -26,27 +29,29 @@
     </div>
 
     <div data-role="content" class="offer-show">
-      <h1 class="offer-title">BMW sehr schnell</h1>
+      <h1 class="offer-title"></h1>
       <div class="informations">
         <p class="category-label">Kategorie:</p><p class="category">Fahrzeug</p>
         <div class="both"></div>
         <p class="autor-label">Verkaeufer:</p><p class="autor">Peter</p>
         <div class="both"></div>
-        <p class="price-label">Preis:</p><p class="price">16 000$</p>
+        <p class="price-label">Preis:</p><p class="price"></p>
         <div class="both"></div>
       </div>
-      <p class="description">Hallo ich verkaufe mein super BMW blablalba</p>
+      <p class="description"></p>
       <div class="images">
-        <a href="image-dialog.html" data-inline="true" data-transition="fade" data-rel="dialog" data-theme="c">
-          <img class="left" src="images/cars/audi/1.png">
-        </a>
-        <img src="images/cars/audi/2.png">
-        <img class="right" src="images/cars/audi/3.png">
-        <div class="both" />
+
+        <a data-inline="true" data-transition="fade" data-rel="dialog" data-theme="c"><img class="left" /></a>
+        <a data-inline="true" data-transition="fade" data-rel="dialog" data-theme="c"><img></a>
+        <a data-inline="true" data-transition="fade" data-rel="dialog" data-theme="c"><img class="right"></a>
+
+        <div class="both"></div>
         <br />
-        <img class="left" src="images/cars/audi/4.png">
-        <img src="images/cars/audi/5.png">
-        <img class="right" src="images/cars/audi/6.png">
+
+        <a data-inline="true" data-transition="fade" data-rel="dialog" data-theme="c"><img class="left"></a>
+        <a data-inline="true" data-transition="fade" data-rel="dialog" data-theme="c"><img></a>
+        <a data-inline="true" data-transition="fade" data-rel="dialog" data-theme="c"><img class="right"></a>
+
       </div>
       <a href="index.html" data-role="button" data-icon="hci-mail">Verkaeufer schreiben</a>
       <a href="index.html" data-role="button" data-icon="hci-phone">Verkaeufer anrufen</a>
@@ -58,6 +63,27 @@
     </div>	
 
   </div>
+  <script>
+  $(document).ready(function() {
+    var offerIndex = parseInt($.url().param('id')) - 1;
+    var offer = hci.offers[offerIndex];
+
+    if (offer === undefined) {
+      offer = hci.offers[0];
+    }
+
+    $('.offer-title').text(offer.title);
+    $('.price').text(offer.price + ' $');
+    $('.description').text(offer.description);
+    $('.place').text(offer.place + ' (' + offer.distance + 'km)');
+    $('.photo').attr('src', offer.photo);
+
+    $('.images a').each(function (index, value) {
+      $('img', $(value)).attr('src', 'images/cars/' + offer.mark + '/'+ (parseInt(index) + 1) +'.png');
+      $(value).attr('href', 'image-dialog.html?id=' + offer.id + '&photo=' + (parseInt(index) + 1));
+    });
+  });
+  </script>
 
 </body> 
 </html> 

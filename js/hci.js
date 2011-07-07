@@ -32,7 +32,7 @@ hci.sortByChangeHandler = function () {
 hci.appendOffer = function(offer) {
   var listElement = document.createElement('li');
 
-  var content = '<a href="show.html" rel="external">\
+  var content = '<a href="" rel="external">\
 	    <img class="photo" />\
 	    <p class="price"></p>\
 	    <h3 class="title"></h3>\
@@ -41,11 +41,12 @@ hci.appendOffer = function(offer) {
     </a>';
   $(listElement).html(content);
 
+  $('a', listElement).attr('href', 'show.html?id=' + offer.id);
   $('.title', listElement).text(offer.title);
-  $('.price', listElement).text(offer.price);
+  $('.price', listElement).text(offer.price + ' $');
   $('.description', listElement).text(offer.description);
   $('.place', listElement).text(offer.place + ' (' + offer.distance + 'km)');
-  $('.photo', listElement).attr('src', offer.photo);
+  $('.photo', listElement).attr('src', 'images/cars/' + offer.mark + '/1.png');
 
   $('ul.ui-listview').append(listElement);
   $('ul.ui-listview').listview("refresh");

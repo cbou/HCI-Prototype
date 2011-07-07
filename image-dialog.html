@@ -1,31 +1,49 @@
 <!DOCTYPE html> 
 <html> 
-    <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
-    <title>jQuery Mobile Framework - Dialog Example</title> 
-    <link rel="stylesheet"  href="../../themes/default/" />  
-    <link rel="stylesheet" href="../_assets/css/jqm-docs.css"/>
-    <script src="../../js/jquery.js"></script>
-    <script src="../../experiments/themeswitcher/jquery.mobile.themeswitcher.js"></script>
-    <script src="../_assets/js/jqm-docs.js"></script>
-    <script src="../../js/"></script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>HCI Kleinanzeige</title> 
+
+  <link rel="stylesheet"  href="css/reset.css" />
+  <link rel="stylesheet"  href="css/jquery.mobile-1.0b1.css" />
+  <link rel="stylesheet"  href="css/hci-offer.css" />  
+
+  <script src="js/jquery-1.6.1.js"></script>
+  <script src="js/jquery.mobile-1.0b1.js"></script>
+  <script src="js/jquery.url.js"></script>
+  <script src="js/hci.js"></script>
+  <script src="js/hci.offers.js"></script>
 </head> 
 <body> 
 
-<div data-role="page" class="image-dialog">    
+  <div data-role="page" class="image-dialog">    
     <div data-role="header" data-theme="d" data-position="inline">
-        <h1>Suche</h1>
+      <a data-rel="back" data-icon="back" data-theme="c">Zurück</a>
+      <h1>Suche</h1>
     </div>
 
     <div data-role="content" data-theme="c">
       <div class="center-wrapper">            
         <div data-role="controlgroup" data-type="horizontal" >
-          <img class="image-zoom" src="/images/auto/renault/renault-clio.jpg" />
+          <img class="image-zoom" src="images/cars/renault/1.png" />
         </div>
       </div>
     </div>
-</div>
+  <script>
+  $(document).ready(function(){
+    var offerIndex = parseInt($.url().param('id')) - 1;
+    var photoIndex = parseInt($.url().param('photo'));
+    var offer = hci.offers[offerIndex];
+    
+    if (offer === undefined) {
+      offer = hci.offers[0];
+    }
+  
+    //$('.image-zoom').attr('src', 'images/cars/' + offer.mark + '/' + photoIndex + '.png');
+  })  
+  </script>
+  </div>
 
 </body>
 </html>
