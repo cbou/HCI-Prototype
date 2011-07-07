@@ -164,12 +164,21 @@
 .change-place-container a {
   float: right;
 }
+
+/**
+ *  Image dialog
+ */
+.image-dialog .image-zoom {
+  width: 100%;
+}
 /**
  *  Add offer
  */
 .add-offer-form .ui-field-contain {
   padding: 0;
 }
+
+
 
 /**
  *	Libraries override
