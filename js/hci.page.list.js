@@ -11,7 +11,7 @@ hci.page.list.init = function () {
 
 hci.page.list.sortByChangeHandler = function () {
   hci.sortBy = $('.sort-by-select').val();
-  hci.refreshList();
+  hci.page.list.refreshList();
 }
 
 hci.page.list.refreshList = function () {
