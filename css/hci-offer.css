@@ -142,6 +142,8 @@
 
 .images {
   text-align: center;
+  max-width:400px;
+  margin: 0 auto;
 }
 
 .images img{
@@ -193,6 +195,10 @@
  */
 .add-offer-form .ui-field-contain {
   padding: 0;
+}
+
+.description-input {
+  margin: 0 0 15px 0;
 }
 
 /**
