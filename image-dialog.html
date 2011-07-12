@@ -19,7 +19,7 @@
 
   <div data-role="page" class="image-dialog">    
     <div data-role="header" data-theme="d" data-position="inline">
-      <a data-rel="back" data-icon="back" data-theme="c">Zurück</a>
+      <a rel="external" class="back" data-icon="back" data-theme="c">Zurück</a>
       <h1>Suche</h1>
     </div>
 
@@ -40,6 +40,8 @@
     }
 
     $('.image-zoom').attr('src', 'images/cars-big/' + offer.mark + '/' + hci.photoLastClick + '.png');
+
+    $('.back').attr('href', '/show.html?id=' + offer.id);
   })  
   </script>
   </div>
