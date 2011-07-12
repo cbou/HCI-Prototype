@@ -79,9 +79,17 @@
     $('.photo').attr('src', offer.photo);
 
     $('.images a').each(function (index, value) {
-      $('img', $(value)).attr('src', 'images/cars/' + offer.mark + '/'+ (parseInt(index) + 1) +'.png');
+      var photoId = parseInt(index) + 1;
+      $('img', $(value)).attr('src', 'images/cars/' + offer.mark + '/'+ photoId +'.png');
+      $('img', $(value)).attr('data-photoid', photoId);
       $(value).attr('href', 'image-dialog.html?id=' + offer.id + '&photo=' + (parseInt(index) + 1));
     });
+    
+    hci.photoLastClick = 1;
+
+    $('.images a img').click(function () {
+      hci.photoLastClick = $(this).attr('data-photoid');
+    });    
   });
   </script>
 

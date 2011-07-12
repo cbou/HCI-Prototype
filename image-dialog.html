@@ -33,14 +33,13 @@
   <script>
   $(document).ready(function(){
     var offerIndex = parseInt($.url().param('id')) - 1;
-    var photoIndex = parseInt($.url().param('photo'));
     var offer = hci.offers[offerIndex];
     
     if (offer === undefined) {
       offer = hci.offers[0];
     }
-  
-    //$('.image-zoom').attr('src', 'images/cars/' + offer.mark + '/' + photoIndex + '.png');
+
+    $('.image-zoom').attr('src', 'images/cars-big/' + offer.mark + '/' + hci.photoLastClick + '.png');
   })  
   </script>
   </div>

@@ -3,7 +3,7 @@ hci.offers = [
     id: 1,
     title : 'BMW sehr schnell',
     mark: 'bmw',
-    description : 'Faehrt gut und schnell',
+    description : 'Fährt gut und schnell',
     price : 16000,
     place: 'Berlin - Wedding',
     distance: 1,
