@@ -175,6 +175,8 @@
  */
 .image-dialog .image-zoom {
   width: 100%;
+  max-width:400px;
+  max-height:400px;
 }
 
 .image-dialog .ui-btn-left {
