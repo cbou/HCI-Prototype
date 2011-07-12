@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <title>HCI Kleinanzeigen</title> 
+
+  <link rel="stylesheet"  href="/css/reset.css" />
+  <link rel="stylesheet"  href="/css/jquery.mobile-1.0b1.css" />
+  <link rel="stylesheet"  href="/css/hci-offer.css" />
+
+  <script src="/js/jquery-1.6.1.js"></script>
+  <script src="/js/jquery.mobile-1.0b1.js"></script>
+  <script src="/js/hci.js"></script>
+  <script src="/js/hci.page.list.js"></script>
+  <script src="/js/hci.offers.js"></script>
+
+</head> 
+<body> 
+
+  <div data-role="page" id="jqm-home" class="type-home list-page"> 
+
+    <div data-role="header" data-position="inline">
+      <a rel="external" href="/index.html" data-icon="back" data-theme="c">Zurück</a>
+      <h1>Liste</h1>
+      <a href="search-dialog.html" data-role="button" data-transition="fade" data-rel="dialog" data-icon="gear" data-theme="c">Edit</a>
+    </div>
+
+    <div data-role="content">
+      <ul data-role="listview"></ul>
+    </div> 
+
+    <div data-role="footer" data-theme="c"> 
+      <p>&copy; 2011 HCI Kleinanzeigen</p>
+    </div>	
+
+  </div>
+
+  <script type="text/javascript">
+    $('#jqm-home').live('pagecreate',function(event){
+      hci.page.list.init();
+    });
+  </script>
+
+</body> 
+</html> 

@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <title>HCI Kleinanzeigen</title> 
+
+  <link rel="stylesheet"  href="/css/reset.css" />
+  <link rel="stylesheet"  href="/css/jquery.mobile-1.0b1.css" />  
+  <link rel="stylesheet"  href="/css/jquery.alerts.css" />  
+  <link rel="stylesheet"  href="/css/hci-offer.css" />  
+
+  <script src="/js/jquery-1.6.1.js"></script>
+  <script src="/js/jquery.mobile-1.0b1.js"></script>
+  <script src="/js/jquery.alerts.js"></script>
+  <script src="/js/jquery.url.js"></script>
+  <script src="/js/hci.js"></script>
+  <script src="/js/hci.offers.js"></script>
+  <script src="/js/hci.dialog.image.js"></script>
+
+</head> 
+<body> 
+
+  <div data-role="page" id="jqm-home" class="type-home show-page"> 
+
+    <div data-role="header" data-position="inline">
+      <a rel="external" href="/list.html" data-icon="back" data-theme="c">Zurück</a>
+      <h1>&nbsp;</h1>
+      <a href="index.html" rel="external" data-icon="home" data-theme="c">Start</a>
+    </div>
+
+    <div data-role="content" class="offer-show">
+      <h1 class="offer-title"></h1>
+      <div class="informations">
+        <p class="category-label">Kategorie:</p><p class="category">Fahrzeug</p>
+        <div class="both"></div>
+        <p class="autor-label">Verkaeufer:</p><p class="autor">Peter</p>
+        <div class="both"></div>
+        <p class="price-label">Preis:</p><p class="price"></p>
+        <div class="both"></div>
+      </div>
+      <p class="description"></p>
+      <div class="images">
+
+        <a data-inline="true" data-transition="fade" data-rel="dialog" data-theme="c"><img class="left" /></a>
+        <a data-inline="true" data-transition="fade" data-rel="dialog" data-theme="c"><img></a>
+        <a data-inline="true" data-transition="fade" data-rel="dialog" data-theme="c"><img class="right"></a>
+
+        <div class="both"></div>
+        <br />
+
+        <a data-inline="true" data-transition="fade" data-rel="dialog" data-theme="c"><img class="left"></a>
+        <a data-inline="true" data-transition="fade" data-rel="dialog" data-theme="c"><img></a>
+        <a data-inline="true" data-transition="fade" data-rel="dialog" data-theme="c"><img class="right"></a>
+
+      </div>
+      <a href="index.html" data-role="button" data-icon="hci-mail">Verkaeufer schreiben</a>
+      <a href="index.html" data-role="button" data-icon="hci-phone">Verkaeufer anrufen</a>
+      <a href="index.html" data-role="button" data-icon="hci-share">Share</a>
+    </div> 
+
+    <div data-role="footer" data-theme="c"> 
+      <p>&copy; 2011 HCI Kleinanzeigen</p>
+    </div>	
+
+  </div>
+  <script>
+  $(document).ready(function() {    
+    var flashMessage = $.url().param('flashMessage');
+    var flashTitle = $.url().param('flashTitle');
+    if (flashMessage !== undefined) {
+      jAlert(flashMessage, flashTitle);
+    }
+
+    var offerIndex = parseInt($.url().param('id')) - 1;
+    var offer = hci.offers[offerIndex];
+
+    if (offer === undefined) {
+      offer = hci.offers[0];
+    }
+
+    $('.offer-title').text(offer.title);
+    $('.price').text(offer.price + ' $');
+    $('.description').text(offer.description);
+    $('.place').text(offer.place + ' (' + offer.distance + 'km)');
+    $('.photo').attr('src', offer.photo);
+
+    $('.images a').each(function (index, value) {
+      var photoId = parseInt(index) + 1;
+      $('img', $(value)).attr('src', 'images/cars/' + offer.mark + '/'+ photoId +'.png');
+      $('img', $(value)).attr('data-photoid', photoId);
+      $(value).attr('href', 'image-dialog.html?id=' + offer.id + '&photo=' + (parseInt(index) + 1));
+    });
+    
+    hci.photoLastClick = 1;
+
+    $('.images a img').click(function () {
+      hci.photoLastClick = $(this).attr('data-photoid');
+    });    
+  });
+  </script>
+
+</body> 
+</html> 

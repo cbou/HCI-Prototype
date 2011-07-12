@@ -1,0 +1,82 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HCI Kleinanzeigen</title> 
+
+  <link rel="stylesheet" href="/css/reset.css" />
+  <link rel="stylesheet" href="/css/jquery.mobile-1.0b1.css" />
+  <link rel="stylesheet" href="/css/jquery.swipegallery.css">
+  <link rel="stylesheet" href="/css/hci-offer.css" />  
+
+  <script type="text/javascript" src="/js/jquery-1.6.1.js"></script>
+  <script type="text/javascript" src="/js/jquery.mobile-1.0b1.js"></script> 
+  <script type="text/javascript" src="/js/jquery.swipegallery.js"></script>
+  <script type="text/javascript" src="/js/hci.js"></script> 
+  <script type="text/javascript" src="/js/hci.page.index.js"></script> 
+
+</head> 
+<body> 
+  <div data-role="page" id="jqm-home" class="type-home index-page"> 
+
+    <div data-role="header" data-position="inline">
+    </div>
+
+    <div data-role="content"> 
+      <header>
+        <h1 class="header-title">HCI Kleinanzeigen</h1>
+      </header>
+
+      <form class="search-form" action="list.html">
+        <input type="text" name="q" />
+        <div class="search-submit">
+          <a href="list.html" class="search-submit" data-inline="true" rel="external"  data-role="button" data-theme="a" >Suchen</a>
+        </div>
+      </form>
+
+      <a href="form.html" rel="external"  data-role="button" data-icon="plus">Neue Anzeige</a>
+      
+  
+      <p class="top-10-label">Top 10:</p>
+      <div class="swipegallery-container">
+        <ul data-role="listview" class="swipegallery">
+
+          <li><a href="show.html"  rel="external">
+            <img src="/images/cars/bmw/1.png" />
+            <h3>BMW sehr schnell</h3>
+            <p>Fährt gut und schnell</p>
+          </a></li>
+
+          <li><a href="show.html"  rel="external">
+            <img src="/images/cars/renault/1.png" />
+            <h3>Billige Renault</h3>
+            <p>Vier raeder, ein Motor, kein Sitze</p>
+          </a></li>
+
+
+          <li><a href="show.html"  rel="external">
+            <img src="/images/cars/vw/1.png" />
+            <h3>VW Käfer</h3>
+            <p>Alteres Fahrzueg</p>
+          </a></li>
+
+        </ul>
+      </div>
+    </div> 
+
+    <div data-role="footer" data-theme="c"> 
+      <p>&copy; 2011 HCI Kleinanzeigen</p> 
+    </div>
+
+  </div>
+
+  <script type="text/javascript" language="Javascript">
+  $(window).load(function() { 
+    hci.page.index.init();
+  });
+  </script> 
+
+</body> 
+</html> 

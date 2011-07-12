@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+</head> 
+<body> 
+
+  <div data-role="page" class="image-dialog">    
+    <div data-role="header" data-theme="d" data-position="inline">
+      <a rel="external" class="back" data-icon="back" data-theme="c">Zurück</a>
+      <h1>Zoom</h1>
+    </div>
+
+    <div data-role="content" data-theme="c">
+      <div class="center-wrapper">            
+        <div data-role="controlgroup" data-type="horizontal" >
+          <img class="image-zoom" src="images/cars/renault/1.png" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+    $(document).ready(function(){
+      hci.dialog.image.init();
+    })  
+    </script>
+  </div>
+</body>
+</html>

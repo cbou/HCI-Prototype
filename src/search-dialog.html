@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head> 
+<body> 
+  <div data-role="page">
+    
+    <div data-role="header" data-theme="d" data-position="inline">
+        <h1>Suche</h1>
+    </div>
+
+    <div data-role="content" data-theme="c">
+      <label for="name">Titel:</label>
+      <input type="text" name="name" id="name" value=""  />
+
+      <label for="select-choice-1" class="select">Kategorie:</label>
+      <select name="select-choice-1" id="select-choice-1">
+        <option value="standard">Fahrzeug</option>
+        <option value="rush">Sport</option>
+        <option value="express">Musik</option>
+        <option value="overnight">Immobilien</option>
+      </select>
+
+      <label for="name">Preis Minimum:</label>
+      <input type="number" name="name" id="name" value=""  />
+
+      <label for="name">Preis Maximum:</label>
+      <input type="number" name="name" id="name" value=""  />
+
+      <div class="change-place-container">
+        <p>Nah von Berlin</p>
+        <a data-inline="true" data-role="button" data-theme="c">Aendern</a>
+      </div>
+      <div class="both"></div>
+
+      <label for="select-choice-1" class="select">Sortierung:</label>
+      <select class="sort-by-select">
+        <option value="price">Filtern nach Preis</option>
+        <option value="distance">Filtern nach entfernung</option>
+        <option value="score">Filtern nach Bewertung</option>
+      </select>
+
+      <br />
+
+      <div class="center-wrapper">            
+        <div data-role="controlgroup" data-type="horizontal" >
+          <a href="list.html" data-role="button" data-theme="b">Suchen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
