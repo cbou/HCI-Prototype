@@ -8,7 +8,7 @@ hci.dialog.image.init = function () {
     offer = hci.offers[0];
   }
 
-  $('.image-zoom').attr('src', 'images/cars-big/' + offer.mark + '/' + hci.photoLastClick + '.png');
+  $('.image-zoom').attr('src', 'images/cars/' + offer.mark + '/' + hci.photoLastClick + '.png');
 
   $('.back').attr('href', '/show.html?id=' + offer.id);
 }

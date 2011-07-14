@@ -89,7 +89,7 @@
 
     $('.images a').each(function (index, value) {
       var photoId = parseInt(index) + 1;
-      $('img', $(value)).attr('src', 'images/cars-big/' + offer.mark + '/'+ photoId +'.png');
+      $('img', $(value)).attr('src', 'images/cars/' + offer.mark + '/'+ photoId +'.png');
       $('img', $(value)).attr('data-photoid', photoId);
       $(value).attr('href', 'image-dialog.html?id=' + offer.id + '&photo=' + (parseInt(index) + 1));
     });
