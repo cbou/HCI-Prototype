@@ -69,7 +69,7 @@
         parent.css('height', containerHeight);
         parent.css('width',  containerWidth);
         
-        return ;
+        //return ;
         imageHandler.css('width', containerWidth);
         imageHandler.css('height', containerHeight);
         imageHandler.css('left', parent.position().left);
