@@ -23,9 +23,9 @@ hci.offers = [
   },
   {
     id: 3,
-    title : 'Bequeme Audi',
+    title : 'Bequemer Audi',
     mark: 'audi',
-    description : 'Everyone dreams of an Audi.',
+    description : 'Jeder träumt von einem Audi.',
     price : 17000,
     place: 'Berlin - Potsdam',
     distance: 50,
@@ -34,9 +34,9 @@ hci.offers = [
   },
   {
     id: 4,
-    title : 'Mercedes fuer Retner',
+    title : 'Mercedes für Rentner',
     mark: 'mercedes',
-    description : 'Nur fuer reiche Retner.',
+    description : 'Nur für reiche Rentner.',
     price : 32000,
     place: 'Muenchen',
     distance: 1000,
