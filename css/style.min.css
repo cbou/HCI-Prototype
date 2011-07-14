@@ -1865,6 +1865,10 @@ body{
 /**
  *  INDEX
  */
+.ui-content header .header-title img.logo{
+  width: 80%;
+}
+
 .index-page .header-title {
   text-align:center;
   font-weight:bold;
