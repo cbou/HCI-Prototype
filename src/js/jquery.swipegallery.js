@@ -69,13 +69,13 @@
         parent.css('height', containerHeight);
         parent.css('width',  containerWidth);
         
-        //return ;
+        
+        obj.css('width', imagesLength * containerWidth);
+        return ;
         imageHandler.css('width', containerWidth);
         imageHandler.css('height', containerHeight);
         imageHandler.css('left', parent.position().left);
         imageHandler.css('top', parent.position().top);
-        
-        obj.css('width', imagesLength * containerWidth);
     }
         
     return this.each(function(){        
