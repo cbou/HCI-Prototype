@@ -61,7 +61,6 @@
            containerHeight = parseInt(settings.height);  
            containerWidth  = parseInt(settings.width);  
         }
-        
         obj.find('li').each(function(){
             doResizeImage(this);
             imagesLength++;
@@ -70,6 +69,7 @@
         parent.css('height', containerHeight);
         parent.css('width',  containerWidth);
         
+        return ;
         imageHandler.css('width', containerWidth);
         imageHandler.css('height', containerHeight);
         imageHandler.css('left', parent.position().left);
@@ -107,7 +107,7 @@
       $(window).resize(function(){
         init(_this, parent, imageHandler);   
       })
-      
+      /*
       imageHandler.mousedown(function(event){
         if(!this.mousedown){
             this.mousedown = true;
@@ -153,7 +153,7 @@
       imageHandler.mouseleave(function(event){
          imageHandler.mouseup();
       })
-      
+      */
     });
     
   };
