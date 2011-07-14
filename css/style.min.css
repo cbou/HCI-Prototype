@@ -1810,8 +1810,10 @@ body{
 
 .ui-page .ui-footer {
   position:absolute;
-  bottom: 0;
+  bottom: -40px;
+  padding: 20px 0 0 10px;
   left:0;
+  height: 40px;
 }
 
 .ui-page .ui-content {
