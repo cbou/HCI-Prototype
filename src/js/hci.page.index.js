@@ -13,11 +13,11 @@ hci.page.index.init = function () {
 
   $('.swipegallery-container').live('swipeleft',function(event, ui){
     var galleryWidth = $(event.target).parent().parent().width();
-    $('.swipegallery').animate({left: '-='+galleryWidth+'px'}, { duration: 1000 });
+    $('.swipegallery', $(this)).animate({left: '-='+galleryWidth+'px'}, { duration: 1000 });
   });
 
   $('.swipegallery-container').live('swiperight',function(event, ui){
     var galleryWidth = $(event.target).parent().parent().width();
-    $('.swipegallery').animate({left: '+='+galleryWidth+'px'}, { duration: 1000 });
+    $('.swipegallery', $(this)).animate({left: '+='+galleryWidth+'px'}, { duration: 1000 });
   });
 }
