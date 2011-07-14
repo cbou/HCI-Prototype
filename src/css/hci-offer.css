@@ -142,21 +142,21 @@
 
 .images {
   text-align: center;
-  max-width:400px;
+  max-width:90%;
   margin: 0 auto;
 }
 
 .images img{
-  width: 80px;
-  height: 80px;
+  width: 30%;
+  /*height: 80px;*/
 }
 
 .images .left {
-  margin: 0 0 0 5px;
+  margin: 0 0 0 4%;
 }
 
 .images .right {
-  margin: 0 5px 0 0;
+  margin: 0 4% 0 0;
 }
 
 /**
@@ -176,9 +176,7 @@
  *  Image dialog
  */
 .image-dialog .image-zoom {
-  width: 100%;
-  max-width:400px;
-  max-height:400px;
+  width: 80%;
 }
 
 .image-dialog .ui-btn-left {
