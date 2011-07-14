@@ -33,6 +33,8 @@ js = [
   'hci.page.form.js',
   'hci.page.index.js',
   'hci.page.list.js',
+  'hci.page.show.js',
+  'hci.flash.js',
     'hci.dialog.image.js'
 ]
 
